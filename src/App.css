@@ -1,0 +1,267 @@
+#root {
+  max-width: 1536px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+/* side navbar-styling */
+.navbar {
+  display: block;
+  position: fixed;
+  width: 240px;
+  height: 100vh;
+  top: 0;
+  background-color: #343c68;
+  color: #a9b7d0;
+  z-index: 1029;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-header {
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  width: 240px;
+  height: 50px;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 50px;
+  width: 35px;
+  right: 10px;
+  top: 0;
+  padding: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse {
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggle .on {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar-collapse:hover {
+  width: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.navbar-collapse:hover .navbar-toggle .on {
+  opacity: 1;
+}
+
+.navbar-collapse:hover .navbar-header {
+  width: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse .navbar-list > li > a .item-name {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse:hover .navbar-list > li > a .item-name {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-content-container {
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.navbar-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+/* -----navbar-styling-end----- */
+
+/* header styling */
+header {
+  z-index: 1028;
+  position: relative;
+  display: flex;
+  min-height: 50px;
+  padding: 0;
+  position: relative;
+  top: 0;
+  background: transparent;
+  color: #a9b7d0;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  transition: all 0.3s ease-in-out;
+  background-color: #343c68;
+}
+
+.header-nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+header .header-nav > li {
+  line-height: 50px;
+  display: inline-block;
+  padding: 0 12px;
+}
+
+.header-search-box {
+  margin: 5px;
+  width: auto;
+}
+
+header input[type="text"] {
+  height: 35px;
+  padding: 0px 10px;
+  border-radius: 20px;
+  border: 2px solid #eee4f0;
+  outline: none;
+  background-color: #eee4f0;
+}
+
+.navbar-collapse ~ header {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+.navbar-collapse:hover ~ header {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+/* ----header-styling-end---- */
+
+/* footer-styling-start */
+
+footer {
+  z-index: 1028;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0;
+  background: transparent;
+  color: #a9b7d0;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  transition: all 0.3s ease-in-out;
+  background-color: #343c68;
+}
+
+footer > p {
+  font-size: 18px;
+}
+
+.navbar-collapse ~ footer {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+.navbar-collapse:hover ~ footer {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+/* --- footer-styling-end --- */
+
+/* main section styling start*/
+.main-container {
+  min-height: calc(100% - 100px);
+  display: block;
+  margin-left: 240px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse ~ .main-container {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+.navbar-collapse:hover ~ .main-container {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+/*main section styling end*/
+
+/*responsiveness*/
+@media only screen and (max-width: 991px) {
+  .navbar-collapse {
+    margin-left: -240px;
+    position: fixed;
+    height: 100%;
+    box-shadow: none;
+  }
+
+  .navbar .navbar-header {
+    display: none;
+  }
+
+  .navbar ~ header {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .navbar-collapse ~ header {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .navbar ~ .main-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar-collapse ~ .main-container {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar ~ footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar-collapse ~ footer {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .header-nav > li > a {
+    display: none;
+  }
+}
+
+/* responsiveness end */

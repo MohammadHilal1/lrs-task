@@ -1,0 +1,28 @@
+.nav-item > a {
+  text-align: left;
+  padding: 7px 15px;
+  margin: 5px 0 0;
+  display: block;
+  border-radius: 0;
+  position: relative;
+  color: #a9b7d0;
+}
+
+.nav-item > a:hover {
+  color: #1dc4e9;
+}
+
+.nav-item .icon {
+  padding: 4px 7px;
+  margin-right: 7px;
+  width: 30px;
+}
+
+.nav-item .item-name {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.active > a {
+  color: #1dc4e9;
+}
